@@ -1,0 +1,43 @@
+{
+  "name": "rogainify",
+  "version": "0.1.0",
+  "description": "Rogain template browserify transform.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel lib -d dist",
+    "develop": "babel lib -w -d dist",
+    "test": "tape test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krambuhl/rogainify.git"
+  },
+  "keywords": [
+    "rogain",
+    "templating",
+    "utilities"
+  ],
+  "author": "Evan Krambuhl <thekrambuhl@gmail.com> (http://stumptownbear.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krambuhl/rogainify/issues"
+  },
+  "homepage": "https://github.com/krambuhl/rogainify",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.3.13",
+    "browserify": "^13.0.0",
+    "fs-promise": "^0.4.1",
+    "html": "0.0.10",
+    "rogain-config": "^0.1.2",
+    "rogain-core-helpers": "^0.1.4",
+    "rogain-parser": "^0.1.1",
+    "rogain-render-string": "^0.1.2",
+    "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "rogain-parser": "^0.1.1",
+    "through2": "^2.0.1"
+  }
+}

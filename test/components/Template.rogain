@@ -1,0 +1,35 @@
+<div id="articles">
+  <p>Second title: <span>{articles.1.title}</span></p>
+
+  <Defined data={articles}>
+    <Each data={articles} as="@article">
+      <article data-key={@index}> 
+        <Heading tagName="h1" class="heading-small">{@article.title}</Heading>
+        
+        <div class="meta">
+          <If data={@index} value="0">
+            <small>First</small>
+          <Else />
+            <small>Another</small>
+          </If>
+
+          <Unless data={@index} value="2">
+            <p>{@attrs.data} not {@attrs.value}</p>
+          </Unless>
+          
+          <Range data={@index} min="1" max="2">
+            <p>{@index} between {@attrs.min} and {@attrs.max}</p>
+          </Range>
+        </div>
+
+        <p>{@article.contents}</p>
+
+        <a href={@article.href}>Read More</a>
+      </article>
+    </Each>
+  </Defined>
+
+  <Empty data={articles}>
+    <p>No Articles</p>
+  </Empty>
+</div>
