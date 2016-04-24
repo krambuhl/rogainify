@@ -7,19 +7,19 @@
         <Heading tagName="h1" class="heading-small">{@article.title}</Heading>
         
         <div class="meta">
-          <If data={@index} value="0">
+          <If data={@index} equal="0">
             <small>First</small>
           <Else />
             <small>Another</small>
           </If>
 
-          <Unless data={@index} value="2">
+          <If data={@index} not equal="2">
             <p>{@attrs.data} not {@attrs.value}</p>
-          </Unless>
+          </If>
           
-          <Range data={@index} min="1" max="2">
+          <If data={@index} gt="1" lte="2">
             <p>{@index} between {@attrs.min} and {@attrs.max}</p>
-          </Range>
+          </If>
         </div>
 
         <p>{@article.contents}</p>

@@ -1,6 +1,6 @@
 {
   "name": "rogainify",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Rogain template browserify transform.",
   "main": "dist/index.js",
   "scripts": {
@@ -15,7 +15,8 @@
   "keywords": [
     "rogain",
     "templating",
-    "utilities"
+    "browserify",
+    "transform"
   ],
   "author": "Evan Krambuhl <thekrambuhl@gmail.com> (http://stumptownbear.com)",
   "license": "MIT",
@@ -29,15 +30,12 @@
     "babel-preset-es2015": "^6.3.13",
     "browserify": "^13.0.0",
     "fs-promise": "^0.4.1",
-    "html": "0.0.10",
-    "rogain-config": "^0.1.2",
-    "rogain-core-helpers": "^0.1.4",
-    "rogain-parser": "^0.1.1",
-    "rogain-render-string": "^0.1.2",
-    "tape": "^4.4.0"
+    "rogain-registry": "~0.1",
+    "rogain-core-components": "~1.0",
+    "tape": "~4"
   },
   "dependencies": {
-    "rogain-parser": "^0.1.1",
+    "rogain-parser": "~0.5",
     "through2": "^2.0.1"
   }
 }

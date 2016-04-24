@@ -3,7 +3,7 @@ const browserify = require('browserify');
 const Rogainify = require('../dist');
 
 var b = browserify();
-b.transform(Rogainify, { config: require('./config/parser.js') });
-b.add('./main.js');
+b.transform(Rogainify);
+b.add(__dirname + '/main.js');
 
 b.bundle().pipe(process.stdout);
